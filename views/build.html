@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Stroller</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="/style.css" />
+
+  </head>
+  <body onload="loadPage(); buildStroller()">
+    <!-- Load Screen Section -->
+    <div class="load-screen" id="loader">
+      <div class="load-art">
+        <div class="load-logo-container">
+          <span class="bolt"></span>
+          <div class="load-logo one"></div>
+          <div class="load-logo cross"></div>
+          <div class="load-gen"></div>
+        </div>
+        <div class="load-text">charging...</div>
+      </div>
+    </div>
+        <!-- Nav Section  -->
+    <nav class="nav">
+      <ul>
+          <li class="logo"onclick="location.href='/index.html'"></li>
+          <li class="menu" id="menu">Menu</li>
+      </ul>
+    </nav>
+
+    <nav class="quick-nav hide" id="quick-nav">
+      <ul class="quick-link">
+      <span class="material-symbols-outlined" id="close-nav">
+       disabled_by_default
+        </span>
+      <li class="logo" onclick="location.href='/index.html'"></li>
+      <!-- <li class="quicknav-logo"></li> -->
+      <li class="home" onclick="location.href='/index.html'">Home</li>
+      <li class="order" onclick="location.href='order.html'">Order</li>
+    </ul>
+    </nav>
+
+    <section class="hero-build">
+      <div class="build-title">
+        <div class="build-logo"></div>
+        <p class="build-text">Create Your Cyber Stroller</p>
+      </div>
+      <!-- Customize Section  -->
+      <div class="build-image" id="builder">
+        <!-- Paint Section  -->
+        <div class="asset light" id="light-item"></div>
+        <div class="asset wheels" id="wheels-item"></div>
+        <div class="asset reflect" id="refinish-item"></div>
+        <div class="asset canvas" id="canvas-item"></div>
+        <div class="asset seats" id="seats-item"></div>
+        <div class="asset weapons" id="weapons-item"></div>
+        <div class="asset paint" id="paint-item"></div>
+
+        <!-- Build Success Message -->
+        <div class="successMsg-container" id="update-success">
+          <h1>Stoller Updated!</h1>
+          <span> <i class="fa-solid fa-pen-to-square"></i></span>
+        </div>
+        <!-- Options Error Message -->
+        <div class="orderMsg-container error" id="order-error">
+          <p>Uh-Oh.. this is just a demo site. We're not actually taking any orders but feel free to explore and share</p>
+          <span> <i class="fa-solid fa-triangle-exclamation"></i></span>
+          <p>Click anywhere to continue...</p>
+        </div>
+
+      </div>
+
+
+
+     <div class="options close" id="options">
+          <div class="open-btn">
+            <h4 class="arrow-text info"><span class="material-symbols-outlined">
+              keyboard_double_arrow_right
+              </span>
+            </h4>
+            <span class="material-symbols-outlined" id="open">
+            construction
+              </span>
+          </div>
+
+            <span class="material-symbols-outlined" id="zoom">
+              zoom_in
+                </span>
+
+            <div class="form-bg" id="form-bg">
+
+            </div>
+          <!-- <form> -->
+            <form class="active">
+
+           
+              <!-- <i class="fa-solid fa-xmark" id="close"></i> -->
+              <h4 class="options-title"> Select Stroller Options <span class="material-symbols-outlined" id="close-options">
+                backspace
+                </span>
+      
+              </h4>
+              <!-- options  -->
+          <p class="options-text" id="paint-btn">paint</p>
+          <!-- Paint options  -->
+          <div class="paint-options">
+              <div>
+                  <input
+                  class="grey"
+                  type="radio"
+                  name="refinish"
+                  value="reflect"
+                  id="gloss"
+                  />
+              <label for="gloss">gloss</label>
+              </div>
+              <div>
+                  <input
+                  class="black"
+                  type="radio"
+                  name="refinish"
+                  value="none"
+                  id="gloss-none"
+                
+              />
+              <label for="gloss-none">matte</label>
+            </div>
+            </div>
+
+          <p class="options-text" id="color-btn">color</p>
+          <!-- color options  -->
+          <div class="color-options">
+            <div>
+              <input
+                class="black"
+                type="radio"
+                name="paint"
+                value="blk"
+                id="black"
+              />
+              <label for="black">black</label>
+            </div>
+            <div>
+              <input
+                class="grey"
+                type="radio"
+                name="paint"
+                value="stl"
+                id="grey"
+              />
+              <label for="grey">stainless</label>
+            </div>
+            <div>
+              <input
+                class="blue"
+                type="radio"
+                name="paint"
+                value="ice"
+                id="ice"
+              />
+              <label for="ice">tundra</label>
+            </div>
+            <div>
+              <input
+                class="brown"
+                type="radio"
+                name="paint"
+                value="jun"
+                id="jun"
+              />
+              <label for="jun">jungle</label>
+            </div>
+            <div>
+              <input
+                class="red"
+                type="radio"
+                name="paint"
+                value="red"
+                id="red"
+              />
+              <label for="red">victory</label>
+            </div>
+            <div>
+              <input
+                class="grey"
+                type="radio"
+                name="paint"
+                value="smk"
+                id="smk"
+              />
+              <label for="smk">smoke</label>
+            </div>
+          </div>
+
+          <p class="options-text" id="wheel-btn">wheels</p>
+          <!-- wheel options -->
+          <div class="wheel-options">
+            <div>
+              <input
+                class="black"
+                type="radio"
+                name="wheel"
+                value="mud"
+                id="mud"
+              />
+              <label for="mud">mud</label>
+            </div>
+            <div>
+              <input
+                class="black"
+                type="radio"
+                name="wheel"
+                value="tread"
+                id="tread"
+              />
+              <label for="tread">tread</label>
+            </div>
+            <div>
+              <input
+                class="black"
+                type="radio"
+                name="wheel"
+                value="ski"
+                id="ski"
+              />
+              <label for="ski">ski tread</label>
+            </div>
+          </div>
+          <!-- canvas options  -->
+          <p class="options-text" id="canvas-btn">canvas</p>
+          <div class="canvas-options">
+            <div>
+              <input
+                class="black"
+                type="radio"
+                name="canvas"
+                value="blk"
+                id="black-can"
+              />
+              <label for="black-can">black</label>
+            </div>
+            <div>
+              <input
+                class="blue"
+                type="radio"
+                name="canvas"
+                value="blu"
+                id="blue"
+              />
+              <label for="blue">blue</label>
+            </div>
+            <div>
+              <input
+                class="brown"
+                type="radio"
+                name="canvas"
+                value="bwn"
+                id="brown"
+              />
+              <label for="brown">brown</label>
+            </div>
+            <div>
+              <input
+                class="grey"
+                type="radio"
+                name="canvas"
+                value="gry"
+                id="grey-can"
+              />
+              <label for="grey-can">grey</label>
+            </div>
+            <div>
+              <input
+                class="red"
+                type="radio"
+                name="canvas"
+                value="red"
+                id="red-can"
+              />
+              <label for="red-can">red</label>
+            </div>
+            <div>
+              <input
+                class="white"
+                type="radio"
+                name="canvas"
+                value="wht"
+                id="white"
+              />
+              <label for="white">white</label>
+            </div>
+            <div>
+              <input
+                class="none"
+                type="radio"
+                name="canvas"
+                value="none"
+                id="can-none"
+              />
+              <label for="can-none">none</label>
+            </div>
+          </div>
+          <!-- seat options  -->
+          <p class="options-text" id="seat-btn">seats</p>
+          <div class="seats-options">
+            <div>
+              <input
+                class="black"
+                type="radio"
+                name="seat"
+                value="blk"
+                id="black-seat"
+              />
+              <label for="black-seat">black</label>
+            </div>
+            <div>
+              <input
+                class="blue"
+                type="radio"
+                name="seat"
+                value="blu"
+                id="blue-seat"
+              />
+              <label for="blue-seat">royal</label>
+            </div>
+            <div>
+              <input
+                class="brown"
+                type="radio"
+                name="seat"
+                value="bwn"
+                id="brown-seat"
+              />
+              <label for="brown-seat">camel</label>
+            </div>
+            <div>
+              <input
+                class="red"
+                type="radio"
+                name="seat"
+                value="red"
+                id="red-seat"
+              />
+              <label for="red-seat">maroon</label>
+            </div>
+            <div>
+              <input
+                class="white"
+                type="radio"
+                name="seat"
+                value="wht"
+                id="white-seat"
+              />
+              <label for="white-seat">white</label>
+            </div>
+          </div>
+          <!-- weapon options  -->
+          <p class="options-text" id="weapon-btn">weapon</p>
+          <div class="weapons-options">
+            <div>
+              <input
+                class="steel"
+                type="radio"
+                name="gun"
+                value="gun"
+                id="gun"
+              />
+              <label for="gun">gatling gun</label>
+            </div>
+            <div>
+              <input
+                class="fire"
+                type="radio"
+                name="gun"
+                value="flame"
+                id="flame"
+              />
+              <label for="flame">flame thrower</label>
+            </div>
+            <div>
+              <input 
+                class="none"
+                type="radio"
+                name="gun"
+                value="none"
+                id="gun-none"
+              />
+              <label for="gun-none">none</label>
+            </div>
+          </div>
+          
+          <div class="option-footer">
+              <!-- save button  -->
+              <h5 class="save-btn" id="save">SAVE</h5>
+          </div>
+     </div>
+
+    </form>
+  </div>
+
+    </section>
+
+    <!-- FOOTER SECTION  -->
+    <footer id="footer">
+      <div class="footer-container" >
+        <nav class="nav-bottom">
+          <ul>
+            <li class="logo" onclick="location.href='/index.html'"></li>
+            <li class="home" onclick="location.href='/index.html'">Home</li>
+            <li class="order" onclick="location.href='order.html'">Order</li>
+          </ul>
+        </nav>
+
+        <nav class="nav-bottom social-links">
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook links"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram links"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter links"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="rights">
+        <p class="rights-info warning">
+          **Warning this is portfolio site project and not affiliated in anyway
+          with Tesla Motor Inc.**
+        </p>
+        <p class="rights-info">
+          CyberStroller Design Concept | Rights Reserved 2022
+        </p>
+        <p class="rights-info">
+          <a
+            href="https://www.williamblakes.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-screwdriver-wrench"></i> Creator:  William Blakes</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
+</html>

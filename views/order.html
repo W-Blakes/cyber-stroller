@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Stroller</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body onload="loadPage()">
+    <!-- Load Screen Section -->
+    <div class="load-screen" id="loader">
+      <div class="load-art">
+        <div class="load-logo-container">
+          <span class="bolt"></span>
+          <div class="load-logo one"></div>
+          <div class="load-logo cross"></div>
+          <div class="load-gen"></div>
+        </div>
+        <div class="load-text">charging...</div>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li class="logo" onclick="location.href='/index.html'"></li>
+        <li class="menu" id="menu">Menu</li>
+        <!-- <li class="home" onclick="location.href='/index.html'">Back</li> -->
+      </ul>
+    </nav>
+
+    <nav class="quick-nav hide" id="quick-nav">
+      <ul class="quick-link">
+        <span class="material-symbols-outlined" id="close-nav">
+          disabled_by_default
+        </span>
+        <li class="logo" onclick="location.href='/index.html'"></li>
+        <li class="home" onclick="location.href='/index.html'">Home</li>
+        <li class="build" id="build" onclick="location.href='build.html'">
+          Build
+        </li>
+      </ul>
+    </nav>
+
+    <section class="hero-order">
+      <div class="order-logo"></div>
+      <div class="order-details">
+        <h1 class="order-title">Order Cyberstroller</h1>
+        <p class="info">
+          You will be able to complete your configuration as production nears
+        </p>
+        <div class="order-info">
+          <h2 class="order-title">Due today</h2>
+          <h3 class="order-title">$100</h3>
+        </div>
+        <p class="info">Fully refundable.</p>
+      </div>
+      <button class="order-btn" onclick="location.href='/views/build.html'">
+        Order With Card
+      </button>
+    </section>
+
+    <!-- FOOTER SECTION  -->
+    <footer>
+      <div class="footer-container">
+        <nav class="nav-bottom">
+          <ul>
+            <li class="logo" onclick="location.href='/index.html'"></li>
+            <li class="home" onclick="location.href='/index.html'">Home</li>
+            <li class="build" onclick="location.href='build.html'">Build</li>
+          </ul>
+        </nav>
+
+        <nav class="nav-bottom social-links">
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook links"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram links"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter links"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="rights">
+        <p class="rights-info warning">
+          **Warning this is portfolio site project and not affiliated in anyway
+          with Tesla Motor Inc.**
+        </p>
+        <p class="rights-info">
+          CyberStroller Design Concept | Rights Reserved 2022
+        </p>
+        <p class="rights-info">
+          <a
+            href="https://www.williamblakes.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-screwdriver-wrench"></i> Creator: William
+            Blakes</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
+</html>

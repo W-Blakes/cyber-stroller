@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Stroller</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="loadPage(); loadUtilityGallery();">
+    <!-- Load Screen Section -->
+    <div class="load-screen" id="loader">
+      <div class="load-art">
+        <div class="load-logo-container" id="info">
+          <span class="bolt"></span>
+          <div class="load-logo one"></div>
+          <div class="load-logo cross"></div>
+          <div class="load-gen"></div>
+        </div>
+        <div class="load-text">charging...</div>
+      </div>
+    </div>
+    <!-- Nav Section  -->
+    <nav class="nav">
+      <ul>
+        <li class="logo" onclick="location.href='/index.html'"></li>
+        <li class="menu" id="menu">Menu</li>
+      </ul>
+    </nav>
+
+    <nav class="quick-nav hide" id="quick-nav">
+      <ul class="quick-link">
+        <span class="material-symbols-outlined" id="close-nav">
+          disabled_by_default
+        </span>
+        <li class="logo" onclick="location.href='/index.html'"></li>
+        <!-- <li class="quicknav-logo"></li> -->
+        <li class="order" onclick="location.href='views/order.html'">Order</li>
+        <li class="build" id="build" onclick="location.href='views/build.html'">
+          Build
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section  -->
+
+    <section class="hero">
+      <div class="hero-lights"></div>
+      <div class="hero-title">
+        <div class="title-logo"></div>
+        <p class="title-text">
+          BETTER UTILITY THAN A STROLLER WITH MORE PERFORMANCE THAN A GO-CAR
+        </p>
+      </div>
+      <button class="order-btn" onclick="location.href='/views/order.html'">
+        Order Now
+      </button>
+    </section>
+
+    <!-- Details Section  -->
+
+    <section class="details">
+      <div class="info-container">
+        <img
+          class="intro-pic"
+          src="/images/stcs_side.png"
+          alt=""
+          style="object-fit: cover"
+        />
+        <h2 class="intro-title">Exoskeleton</h2>
+        <p class="info intro-text">
+          Cyberstroller is built with an exterior shell made for ultimate
+          durability and passenger protection. Starting with a nearly
+          impenetrable exoskeleton, every component is designed for superior
+          strength and endurance, from Ultra-Hard 30X Cold-Rolled
+          stainless-steel structural skin to Tesla armor glass.
+        </p>
+      </div>
+      <div class="info-container">
+        <img
+          class="breakdown-pic"
+          src="/images/exo.png"
+          alt=""
+          style="object-fit: cover"
+        />
+        <h3 class="breakdown-title">
+          Ultra-hard 30x cold-rolled stainless steel
+        </h3>
+        <p class="info breakdown-text">
+          If there was something better, we’d use it. Help eliminate dents,
+          damage and long-term corrosion with a smooth monochrome exoskeleton
+          that puts the shell on the outside of the stroller and provides your
+          little angel maximum protection
+        </p>
+      </div>
+    </section>
+
+    <!-- Utility Section  -->
+
+    <section class="utility">
+      <!-- nav  -->
+
+      <!-- Content  -->
+      <div class="utility-container">
+        <div class="img-container">
+          <img
+            class="utility-pic active"
+            src="/images/set_dark.png"
+            alt=""
+            style="object-fit: cover"
+          />
+          <img
+            class="utility-pic"
+            src="/images/cyber_alleytall.png"
+            alt=""
+            style="object-fit: cover"
+          />
+          <img
+            class="utility-pic"
+            src="/images/sidewalk_side.png"
+            alt=""
+            style="object-fit: cover"
+          />
+          <img
+            class="utility-pic"
+            src="/images/cyber_combat.png"
+            alt=""
+            style="object-fit: cover"
+            data-type="3"
+          />
+        </div>
+        <div class="utility-insert">
+          <div class="utility-btns">
+            <div class="utility-btn active"></div>
+            <div class="utility-btn"></div>
+            <div class="utility-btn"></div>
+            <div class="utility-btn"></div>
+          </div>
+        </div>
+        <div class="utility-content active" id="gallery-info">
+          <h4 class="utility-title">Flexible Travel</h4>
+          <p class="info utility-text">
+            Travel from point A to B in the cyber stroller or car seat. Our
+            multi-functional travel system allows a more optimal and safe choice
+            for any type of journey ahead.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <nav class="nav-bottom">
+          <ul>
+            <li class="logo" onclick="location.href='/index.html'"></li>
+            <li class="order" onclick="location.href='views/order.html'">
+              Order
+            </li>
+            <li class="build" onclick="location.href='views/build.html'">
+              Build
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="nav-bottom social-links">
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook links"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram links"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter links"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="rights">
+        <p class="rights-info warning">
+          **Warning this is portfolio site project and not affiliated in anyway
+          with Tesla Motor Inc.**
+        </p>
+        <p class="rights-info">
+          CyberStroller Design Concept | Rights Reserved 2022
+        </p>
+        <p class="rights-info">
+          <a
+            href="https://www.williamblakes.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><i class="fa-solid fa-screwdriver-wrench"></i> Creator: William
+            Blakes</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
