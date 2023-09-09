@@ -14,3 +14,7 @@ Allows users to browse 3D rendered images of a mock Cyber-Stoller and create the
 Made with no frameworks or libraries 
 Used 3Ds Max for the modeling and rendering
 </small>
+<br>
+<br>
+<img style="height:300px" src="https://github.com/W-Blakes/cyber-stroller/assets/90099032/1b3198d3-6eff-4b11-94dd-7e7fa48eb995">
+
